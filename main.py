@@ -13,6 +13,13 @@ from api.generate import register_generation_tools
 from api.storage import register_storage_tools
 from api.config import get_api_key, SERVER_NAME, SERVER_DESCRIPTION, SERVER_VERSION, SERVER_DEPENDENCIES
 
+from fastapi import FastAPI
+app = FastAPI()
+
+@app.get("/healthz")
+def health():
+    return {"ok": True}
+
 mcp = FastMCP(
     SERVER_NAME,
     description=SERVER_DESCRIPTION,
