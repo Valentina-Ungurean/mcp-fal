@@ -12,6 +12,11 @@ def root():
 def healthz():
     return {"status": "ok"}
 
+# optional alias
+@app.get("/health", include_in_schema=False)
+def health():
+    return {"status": "ok"}
+
 @app.on_event("startup")
 async def _log_routes():
     routes = [r.path for r in app.routes if isinstance(r, APIRoute)]
