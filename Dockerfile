@@ -11,4 +11,4 @@ COPY . .
 
 # Cloud Run listens on $PORT
 ENV PORT=8080
-CMD ["uvicorn","gateway:app","--host","0.0.0.0","--port","8080"]
+CMD ["sh","-c","uvicorn main:app --host 0.0.0.0 --port ${PORT}"]
