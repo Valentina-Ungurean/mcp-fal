@@ -4,7 +4,7 @@ ENV PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYTECODE=1
 WORKDIR /app
 
 # If you don't have requirements.txt, you can install deps inline:
-RUN pip install --no-cache-dir fastmcp fastapi uvicorn httpx pydantic
+RUN pip install --no-cache-dir fastmcp fastapi uvicorn httpx pydantic aiofiles
 
 # Copy app code
 COPY . .
