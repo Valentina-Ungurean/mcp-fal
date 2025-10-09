@@ -16,4 +16,5 @@ get_api_key()
 
 logging.basicConfig(level=logging.INFO)
 logging.info(f"Starting MCP HTTP on {PATH} port {PORT}")
-mcp.serve_http(host="0.0.0.0", port=PORT, path=PATH)
+
+mcp.run(transport="http", host="0.0.0.0", port=PORT, path=PATH)
