@@ -14,4 +14,4 @@ get_api_key()
 
 # Expose Streamable HTTP (exact API name varies by fastmcp version)
 
-mcp.serve_http(host="0.0.0.0", port=int(os.getenv("PORT", "8080")), path="/mcp")
+mcp.serve_http(host="0.0.0.0", port=int(os.getenv("PORT", "8080")), path="/stream")
